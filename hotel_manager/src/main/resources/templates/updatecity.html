@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>修改酒店数量</title>
+</head>
+<body>
+    <h1>修改酒店数量</h1>
+    <table>
+        <form action="/manager/update" method="post">
+            城市ID：<input type="text" name="cid" th:value="${cid}"><br/>
+            酒店数量：<input type="text" name="number"/><br/>
+            <input type="submit" value="修改">
+        </form>
+    </table>
+</body>
+</html>

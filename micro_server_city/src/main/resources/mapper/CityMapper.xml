@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qf.hotel.mapper.CityMapper">
+    <update id="updateHotelNumber">
+        update city set hotel_number = hotel_number + #{number}
+        where id = #{cid}
+    </update>
+</mapper>

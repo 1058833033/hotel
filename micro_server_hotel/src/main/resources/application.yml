@@ -1,0 +1,25 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: hotel-server
+  datasource:
+    url: jdbc:mysql://localhost:3306/hotel?useSSL=true&serverTimezone=GMT%2b8&useUnicode=true&characterEncoding=utf-8
+    password: 960823
+    username: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+  rabbitmq:
+    addresses: mystar.cool
+    username: guest
+    password: guest
+    virtual-host: /
+    port: 5672
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:20000/eureka
+    fetch-registry: true
+    register-with-eureka: true
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
